@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* Style of my-infinite-recentposts-widget
+ */
+.mircp-posts {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.mircp-time {
+	margin: 0;
+	font-size: .8em;
+}
+
+.mircp-last {
+	display: none;
+	text-align: left;
+	font-size: .8em;
+}
+
+.mircp-loading .spinner {
+	display: none;
+}
+
+.mircp-loading .spinner.active,
+.mircp-last.active {
+	display: block;
+}
+
+.mircp-loading {
+	height: 1em;
+	margin: 0;
+	line-height: 1.5;
+}
+
+.mircp-btn {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	margin: 0;
+	padding: .5em 0;
+}
+
+.mircp-btn a {
+	font-size: .8em;
+	text-align: right;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+/* https://tobiasahlin.com/spinkit/ */
+.spinner {
+	margin: 0 0 0 .1em;
+	width: 70px;
+}
+
+.spinner > div {
+	width: .6em;
+	height: .6em;
+	background-color: #a5c9c1;
+
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0) }
+	40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	} 40% { 
+		-webkit-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
